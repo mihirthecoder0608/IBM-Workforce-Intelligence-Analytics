@@ -1,0 +1,59 @@
+-- CREATE DATABASE Workforce_Intelligence;
+-- USE Workforce_Intelligence;
+-- SELECT
+--     COUNT(*) AS total_employees,
+--     SUM(CASE WHEN Attrition = 'Yes' THEN 1 ELSE 0 END) AS employees_left,
+--     ROUND(
+--         SUM(CASE WHEN Attrition = 'Yes' THEN 1 ELSE 0 END)
+--         * 100.0 / COUNT(*),
+--         2
+--     ) AS attrition_rate
+-- FROM employees;
+-- SELECT
+--     Department,
+--     OverTime,
+--     COUNT(*) AS employees,
+--     SUM(CASE WHEN Attrition = 'Yes' THEN 1 ELSE 0 END) AS employees_left,
+--     ROUND(
+--         SUM(CASE WHEN Attrition = 'Yes' THEN 1 ELSE 0 END)
+--         * 100.0 / COUNT(*),
+--         2
+--     ) AS attrition_rate
+-- FROM employees
+-- GROUP BY Department, OverTime
+-- ORDER BY attrition_rate DESC;
+-- SELECT
+--     JobRole,
+--     COUNT(*) AS employees,
+--     SUM(CASE WHEN Attrition = 'Yes' THEN 1 ELSE 0 END) AS employees_left,
+--     ROUND(
+--         SUM(CASE WHEN Attrition = 'Yes' THEN 1 ELSE 0 END)
+--         * 100.0 / COUNT(*),
+--         2
+--     ) AS attrition_rate
+-- FROM employees
+-- GROUP BY JobRole
+-- ORDER BY attrition_rate DESC;
+-- SELECT
+--     JobRole,
+--     SUM(CASE WHEN Attrition = 'Yes' THEN 1 ELSE 0 END) AS employees_left,
+--     ROUND(
+--         SUM(CASE WHEN Attrition = 'Yes' THEN 1 ELSE 0 END)
+--         * 100.0 /
+--         (SELECT SUM(CASE WHEN Attrition = 'Yes' THEN 1 ELSE 0 END)
+--          FROM employees),
+--         2
+--     ) AS share_of_total_exits
+-- FROM employees
+-- GROUP BY JobRole
+-- ORDER BY employees_left DESC;
+-- SELECT
+--     PerformanceRating,
+--     COUNT(*) AS employees,
+--     ROUND(AVG(MonthlyIncome), 2) AS avg_monthly_income,
+--     MIN(MonthlyIncome) AS min_monthly_income,
+--     MAX(MonthlyIncome) AS max_monthly_income
+-- FROM employees
+-- GROUP BY PerformanceRating
+-- ORDER BY PerformanceRating;
+
