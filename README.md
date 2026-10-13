@@ -184,8 +184,10 @@ All five project files are currently stored inside the `Python` folder. They can
 This project demonstrates how Python, SQL, and Power BI can be combined to turn HR data into actionable workforce insights. By identifying attrition patterns and examining factors associated with employee exits, the analysis provides a foundation for more targeted retention strategies and ongoing HR performance monitoring.
 
 ## Author
-Mihir Mishra
+**Mihir Mishra**
+
 [Linkedin](https://www.linkedin.com/in/mihirmishra/74638ghy)
+
 [Email](mihirmishra006@gmail.com)
 
 Skills demonstrated: Data Cleaning · Exploratory Data Analysis · SQL · MySQL · Power BI · Data Visualization · Business Insights
